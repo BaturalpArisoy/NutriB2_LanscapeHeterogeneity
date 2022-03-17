@@ -2,7 +2,7 @@
 
 ## 1) This code is read-only, unless:
  
-Only users with necessary RSDB credentials can access the database /n
+Only users with necessary RSDB credentials can access the database <br />
 You can find information for user_name & password, explained in the code
 
 ## 2) The Web Coverage Service this code grants access is Remote Sensing Database (RSDB) by Environmental Informatics at Marburg University 
