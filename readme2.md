@@ -17,7 +17,7 @@ Note 4: The only part of the code that doesn't functioning 100% as intended is t
 ## Code Design
 ### Libraries:
  - deque from collections: build-in used for the operations ıf low and high FIFO queues
- - osmnx: third party used to extract and download OSM elements(graph) with the selected BBOX
+ - osmnx: third party used to extract and download OSM elements (graph) with the selected BBOX
  - a) pandas & b) geopandas: third parties used to a) read and slice (data analysis) of datasets, b) read and extract coordinates of geometry attributes
  - shapely: third party used to perform simple geo-processes such as "Select by Location between two features"
  - contextily & matplotlib: third parties, both used to design and plot the geo-features on a cartographic map
