@@ -1,5 +1,6 @@
 # Code Challenge - Shortest Paths on OpenStreetMap
 Developed by Baturalp Arisoy, 29.06.2022, Munich
+ReadMe is written in GitHub as a markdown file
 
 I am excited to share my results of the coding challenge with you. Please find the notes and explanations of the code blocks & algorithm below.
 
@@ -13,8 +14,7 @@ Note 3: The detailed explanation of code blocks can be found below, however the 
 Note 4: The only part of the code that doesn't functioning 100% as intended is the Two-Q algorithm itself. Due to some reasons, both low and high queues are emptied out before the completion of labeling some of the candidate nodes permentantly. Even though all nodes are "SCANNED", some of the nodes will not be labeled, therefore cannot be inilialization parameters as source or destination nodes. However, all the permenantly labeled nodes give excellent routing results, as well as their path visualization in the cartographic map.
 
 
-Code Design:
-
+##Code Design
 - Libraries:
   - deque from collections: build-in used for the operations ıf low and high FIFO queues
   - osmnx: third party used to extract and download OSM elements(graph) with the selected BBOX
