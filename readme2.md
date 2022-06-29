@@ -15,12 +15,12 @@ Note 4: The only part of the code that doesn't functioning 100% as intended is t
 
 
 ## Code Design
-- Libraries:
-  - deque from collections: build-in used for the operations ıf low and high FIFO queues
-  - osmnx: third party used to extract and download OSM elements(graph) with the selected BBOX
-  - a) pandas & b) geopandas: third parties used to a) read and slice (data analysis) of datasets, b) read and extract coordinates of geometry attributes
-  - shapely: third party used to perform simple geo-processes such as "Select by Location between two features"
-  - contextily & matplotlib: third parties, both used to design and plot the geo-features on a cartographic map
+### Libraries:
+ - deque from collections: build-in used for the operations ıf low and high FIFO queues
+ - osmnx: third party used to extract and download OSM elements(graph) with the selected BBOX
+ - a) pandas & b) geopandas: third parties used to a) read and slice (data analysis) of datasets, b) read and extract coordinates of geometry attributes
+ - shapely: third party used to perform simple geo-processes such as "Select by Location between two features"
+ - contextily & matplotlib: third parties, both used to design and plot the geo-features on a cartographic map
 
 
 
@@ -34,27 +34,27 @@ Note 4: The only part of the code that doesn't functioning 100% as intended is t
   
     
       
-- Class Queue:
-  - Each method of the class is called to the following class twoQ
-  - Class confirms a FIFO (First in First out) queue (Pallottino offers that both Qs should be FIFO queues)
-    - enqueue() adds a new element to queue from the tail
-    - dequeue() removes an existing element from the head of the queue
-    - isEmpty() and length() are used to check while loop continuity and assess a range of a for loop respectively
+### Class Queue:
+ - Each method of the class is called to the following class twoQ
+ - Class confirms a FIFO (First in First out) queue (Pallottino offers that both Qs should be FIFO queues)
+   - enqueue() adds a new element to queue from the tail
+   - dequeue() removes an existing element from the head of the queue
+   - isEmpty() and length() are used to check while loop continuity and assess a range of a for loop respectively
 
 
 
-- Class twoQ:
-  - Third-party libraries are never used for the construction of the algorithm but for other purposes
-  - Algorithm consists of 3 main parts according to Pallottino; initialization, extract and scanning operation
-  - Setting up instances:
-    - graph: Gets directory of graph, specified with Class OSM
-    - index numbers of source and destination nodes [if OID in QGIS or ArcGIS starts from 1, the index of first element will be 0 (i = OID-1)]
-  - Reads nodes and edges
-  - Define label, state, parent information as LISTS
-  - INITIALIZATION of the the queues, all candidate nodes are stored in both of the queues, conforming FIFO rule
-    - Assign, label = inf, state = unreached, parent = none to all candidate nodes with a loop
-    - Assign, label = 0, state = in-queue, parent = -1 to source node (Parent index have to be integer because it will point out the child node index but -1 cant be a parent index of any node, so it will stop the routeList iteration later on)
-    - 
+### Class twoQ:
+ - Third-party libraries are never used for the construction of the algorithm but for other purposes
+ - Algorithm consists of 3 main parts according to Pallottino; initialization, extract and scanning operation
+ - Setting up instances:
+   - graph: Gets directory of graph, specified with Class OSM
+   - index numbers of source and destination nodes [if OID in QGIS or ArcGIS starts from 1, the index of first element will be 0 (i = OID-1)]
+ - Reads nodes and edges
+ - Define label, state, parent information as LISTS
+ - INITIALIZATION of the the queues, all candidate nodes are stored in both of the queues, conforming FIFO rule
+   - Assign, label = inf, state = unreached, parent = none to all candidate nodes with a loop
+   - Assign, label = 0, state = in-queue, parent = -1 to source node (Parent index have to be integer because it will point out the child node index but -1 cant be a parent index of any node, so it will stop the routeList iteration later on)
+   - 
    
    
    
