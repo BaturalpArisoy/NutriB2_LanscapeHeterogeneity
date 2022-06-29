@@ -44,7 +44,7 @@ Note 4: The only part of the code that doesn't functioning 100% as intended is t
 
 
 ### Class twoQ:
-- algorithm()
+#### algorithm()
  - Third-party libraries are never used for the construction of the algorithm but for other purposes
  - Algorithm consists of 3 main parts according to Pallottino; initialization, extract and scanning operation
  - Setting up instances:
@@ -74,7 +74,7 @@ routeList = [index[destination], index[parent[destination], index[parent[parent[
     - pathNodes = Above code block also slides node features, resulting in obtaining only nodes that are relevant to route between source and destination nodes
     - Return both routeList and pathNodes
     
-- description()
+#### description()
  - Method can be called to solely obtain simple printed text of route description
  e.g. Start from index[sourceNode], go to index[node], ..., you have arrived the destination index[destinationNode]
  
