@@ -57,19 +57,19 @@ Note 4: The only part of the code that doesn't functioning 100% as intended is t
    - Assign, label = inf, state = unreached, parent = none to all candidate nodes with a loop
    - Assign, label = 0, state = in-queue, parent = -1 to source node (Parent index have to be integer because it will point out the child node index but -1 cant be a parent index of any node, so it will stop the routeList iteration later on)
    - WHILE loop
-    - Extraction and Scanning operations will be inside the loop
-    - Loop stops when only both high and low queues are emptied out by the extraction operation
+     - Extraction and Scanning operations will be inside the loop
+     - Loop stops when only both high and low queues are emptied out by the extraction operation
    - Extraction operation; remove first element of high queues unless high queue is empty, then removal from low queue
    - Scanning operation
-    - Select all candidate edges of the current node by the intersection operation
-    - Select all nodes that are connected to selected edges + remove current node to get rid of the redundancy
-    - Select single edge in a loop and get its length from its attribute table
-    - Perform labeling for each j node that are connected to i node; add node J to either low or high queue depending on the state
+     - Select all candidate edges of the current node by the intersection operation
+     - Select all nodes that are connected to selected edges + remove current node to get rid of the redundancy
+     - Select single edge in a loop and get its length from its attribute table
+     - Perform labeling for each j node that are connected to i node; add node J to either low or high queue depending on the state
    - Label node i = Scanned
    - Go back to While loop
-    - Check if both of queues are empty, if not, continue
-    - Loop starts from graph.node[0] and iterates until graph.node[last_index], once the last index is obtained, the loop starts from the first graph.node[0] once again
-    - Once the two-Q is over, the remaining of the code extracts list of path from destination to source node e.g. 
+     - Check if both of queues are empty, if not, continue
+     - Loop starts from graph.node[0] and iterates until graph.node[last_index], once the last index is obtained, the loop starts from the first graph.node[0] once again
+     - Once the two-Q is over, the remaining of the code extracts list of path from destination to source node e.g. 
 routeList = [index[destination], index[parent[destination], index[parent[parent[destination]], ............, index[source]]
     - pathNodes = Above code block also slides node features, resulting in obtaining only nodes that are relevant to route between source and destination nodes
     - Return both routeList and pathNodes
