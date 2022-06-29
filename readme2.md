@@ -25,15 +25,15 @@ Note 4: The only part of the code that doesn't functioning 100% as intended is t
 
 
 - Class OSM:
-  - get_data() method in the class downloads graph of the pedestrian walking network.
-  - The graph is downloaded as GeoPackage since, Geopackage is an optimized and interoperable format to store geo-datasets.
-  - Downloaded GeoPackage contains two classes; nodes(points) and edges(polyLines)
   - Setting up instances:
     - The user should define the parent directory first to save the Geopackage
     - BBOX coordinates should have been set as, maxx, minx, ymax, ymin
+  - get_data() method in the class downloads graph of the pedestrian walking network.
+  - The graph is downloaded as GeoPackage since, Geopackage is an optimized and interoperable format to store geo-datasets.
+  - Downloaded GeoPackage contains two classes; nodes(points) and edges(polyLines)
+  
     
-    
-    
+      
 - Class Queue:
   - Each method of the class is called to the following class twoQ
   - Class confirms a FIFO (First in First out)
@@ -44,7 +44,9 @@ Note 4: The only part of the code that doesn't functioning 100% as intended is t
 
 
 - Class twoQ:
-  - ü
+  - Setting up instances:
+    - The user should define the parent directory first to save the Geopackage
+    - BBOX coordinates should have been set as, maxx, minx, ymax, ymin
    
    
    
