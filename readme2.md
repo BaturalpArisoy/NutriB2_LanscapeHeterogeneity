@@ -50,6 +50,7 @@ Note 4: The only part of the code that doesn't functioning 100% as intended is t
  - Setting up instances:
    - graph: Gets directory of graph, specified with Class OSM
    - index numbers of source and destination nodes [if OID in QGIS or ArcGIS starts from 1, the index of first element will be 0 (i = OID-1)]
+   - result: function/method two_q(graph, source, target) -> route
  - Reads nodes and edges
  - Define label, state, parent information as LISTS
  - INITIALIZATION of the the queues, all candidate nodes are stored in both of the queues, conforming FIFO rule
