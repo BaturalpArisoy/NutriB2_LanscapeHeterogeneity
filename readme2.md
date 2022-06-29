@@ -3,6 +3,7 @@ Developed by Baturalp Arisoy, 29.06.2022, Munich
 
 I am excited to share my results of the coding challenge with you. Please find the notes and explanations of the code blocks & algorithm below.
 
+## Notes
 Note 1: Due to the limitation of the PC's CPU power, a much more narrow BBOX is tested during the develop process. However, the current parameter of the OSM access code is set to the original BBOX, stated by the challenge menu documentation. Both BBOXs can be found in the "Setting all variables" section of the code.
 
 Note 2: The code is scriptted with object-oriented programming logic, therefore multiple classes can be found. Each class (except Queue) represents one of three different parts of the task; data preparation, shortest path algorithm Two-Q implementation and visualization. Furthermore, methods in the classes can be initiated with given parameters. By the design, the code first contains all the classes and their methods consecutively and instance set-up at the end.
@@ -31,16 +32,21 @@ Code Design:
     - The user should define the parent directory first to save the Geopackage
     - BBOX coordinates should have been set as, maxx, minx, ymax, ymin
     
+    
+    
+- Class Queue:
+  - Each method of the class is called to the following class twoQ
+  - Class confirms a FIFO (First in First out)
+    - enqueue() adds a new element to queue from the tail
+    - dequeue() removes an existing element from the head of the queue
+    - isEmpty() and length() are used to check while loop continuity and assess a range of a for loop respectively
+
+
+
+- Class twoQ:
+  - ü
    
    
    
    
    
-   
-- Folders:
-  - Codes:
-    - WCS connection (R code)
-    - NutriB2 with ArcPy (Python code)
-  - Vector data:
-    - Necessary dataset to run codes
-    - Information is given as text in the codes
