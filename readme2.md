@@ -24,19 +24,19 @@ Note 4: The only part of the code that doesn't functioning 100% as intended is t
 
 
 
-- Class OSM:
-  - Setting up instances:
-    - The user should define the parent directory first to save the Geopackage
-    - BBOX coordinates should have been set as, maxx, minx, ymax, ymin
-  - get_data() method in the class downloads graph of the pedestrian walking network.
-  - The graph is downloaded as GeoPackage since, Geopackage is an optimized and interoperable format to store geo-datasets.
-  - Downloaded GeoPackage contains two classes; nodes(points) and edges(polyLines)
+### Class OSM:
+ - Setting up instances:
+   - The user should define the parent directory first to save the Geopackage
+   - BBOX coordinates should have been set as, maxx, minx, ymax, ymin
+ - get_data() method in the class downloads graph of the pedestrian walking network.
+ - The graph is downloaded as GeoPackage since, Geopackage is an optimized and interoperable format to store geo-datasets.
+ - Downloaded GeoPackage contains two classes; nodes(points) and edges(polyLines)
   
     
       
 - Class Queue:
   - Each method of the class is called to the following class twoQ
-  - Class confirms a FIFO (First in First out)
+  - Class confirms a FIFO (First in First out) queue (Pallottino offers that both Qs should be FIFO queues)
     - enqueue() adds a new element to queue from the tail
     - dequeue() removes an existing element from the head of the queue
     - isEmpty() and length() are used to check while loop continuity and assess a range of a for loop respectively
@@ -44,9 +44,17 @@ Note 4: The only part of the code that doesn't functioning 100% as intended is t
 
 
 - Class twoQ:
+  - Third-party libraries are never used for the construction of the algorithm but for other purposes
+  - Algorithm consists of 3 main parts according to Pallottino; initialization, extract and scanning operation
   - Setting up instances:
-    - The user should define the parent directory first to save the Geopackage
-    - BBOX coordinates should have been set as, maxx, minx, ymax, ymin
+    - graph: Gets directory of graph, specified with Class OSM
+    - index numbers of source and destination nodes [if OID in QGIS or ArcGIS starts from 1, the index of first element will be 0 (i = OID-1)]
+  - Reads nodes and edges
+  - Define label, state, parent information as LISTS
+  - INITIALIZATION of the the queues, all candidate nodes are stored in both of the queues, conforming FIFO rule
+    - Assign, label = inf, state = unreached, parent = none to all candidate nodes with a loop
+    - Assign, label = 0, state = in-queue, parent = -1 to source node (Parent index have to be integer because it will point out the child node index but -1 cant be a parent index of any node, so it will stop the routeList iteration later on)
+    - 
    
    
    
