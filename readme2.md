@@ -1,5 +1,5 @@
 # Code Challenge - Shortest Paths on OpenStreetMap
-Developed by Baturalp Arisoy, 29.06.2022, Munich
+Developed by Baturalp Arisoy, 29.06.2022, Munich <br />
 ReadMe is written in GitHub as a markdown file
 
 I am excited to share my results of the coding challenge with you. Please find the notes and explanations of the code blocks & algorithm below.
